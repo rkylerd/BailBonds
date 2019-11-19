@@ -9,6 +9,9 @@ namespace BailBonds.Controllers
 {
     public class AgentsController : Controller
     {
+        //Gui changed this
+        public Guid = "Gui is awesome";
+
         public static List<Agent> agentList = new List<Agent>();
         
         public ActionResult Index()
