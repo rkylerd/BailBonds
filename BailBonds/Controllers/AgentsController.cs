@@ -9,23 +9,30 @@ namespace BailBonds.Controllers
 {
     public class AgentsController : Controller
     {
-        //Gui changed this lol
-        string Gui = "Gui is awesomejhfjg";
 
         public static List<Agent> agentList = new List<Agent>();
+       
         
         public ActionResult Index()
         {
+            agentList.Add(new Agent("1", "Terry", "Berry", "804564568", new List<string>(new string[] { "Juab", "Sanpete" }),
+                 "https://members.cogwa.org/uploads/do-you-have-to-be-a-tough-guy-to-be-a-man.jpg"));
             return View(agentList);
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult Create(Agent agent)
         {
             agent.agentCode = "" + agentList.Count + 1;
             if (ModelState.IsValid)
             {
                 agentList.Add(agent);
-                return View("Index");
+                return View("Index", agentList);
             }
 
             return View();
