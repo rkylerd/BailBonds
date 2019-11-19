@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BailBonds.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,18 @@ namespace BailBonds.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        [HttpPost]
+        public ActionResult Contact(Contact contact)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index", "Home");  
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

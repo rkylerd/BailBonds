@@ -9,15 +9,16 @@ namespace BailBonds.Models
     public class Contact
     {
         [Required]
-        [Display(Name = "Name:")]
+        [Display(Name = "Name")]
         public string Name { get; set; }
         [Required]
-        [Display(Name = "Email:")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
         [Required]
-        [Display(Name = "Subject:")]
+        [Display(Name = "Subject")]
         public string Subject { get; set; }
-        [Display(Name = "Message Body:")]
+        [Required]
+        [Display(Name = "Message Body")]
         public string Message { get; set; }
     }
 public enum Subject
