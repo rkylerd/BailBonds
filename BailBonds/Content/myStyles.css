@@ -4,3 +4,13 @@
     color: white;
     font-weight: bold;
 }
+
+
+.bryceimagebackground {
+    height: 1500px;
+    max-height: inherit;
+    width: 100%;
+    background-image: url('Images/Family.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
