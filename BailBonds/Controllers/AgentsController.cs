@@ -9,7 +9,7 @@ namespace BailBonds.Controllers
 {
     public class AgentsController : Controller
     {
-        //Gui changed this
+        //Gui changed this lol
         string Gui = "Gui is awesomejhfjg";
 
         public static List<Agent> agentList = new List<Agent>();
