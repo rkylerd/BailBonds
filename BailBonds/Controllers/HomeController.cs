@@ -27,6 +27,12 @@ namespace BailBonds.Controllers
 
             return View();
         }
+        public ActionResult Reviews()
+        {
+            ViewBag.Message = "Your Viewbag page";
+
+            return View();
+        }
         [HttpPost]
         public ActionResult Contact(Contact contact)
         {
