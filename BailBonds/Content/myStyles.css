@@ -6,24 +6,17 @@
 }
 
 
-.bryceimagebackground {
-
-    background-image: url('Images/Family.jpg');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the images */
-}
-
 .brycecontainer {
     position: relative;
     width: 100%;
 }
-
+/*This sets my image*/
 .bryceimage {
     display: block;
     width: 100%;
     height: auto;
 }
-
+/*This Sets my Overlay, so it can fade in and out*/
 .bryceoverlay {
     position: absolute;
     top: 0;
@@ -36,13 +29,15 @@
     transition: .5s ease;
     background-color: yellow;
 }
-
+/*Fades on hover of mouse*/
 .brycecontainer:hover .bryceoverlay {
     opacity: .5;
 }
+/*centers my text*/
 .brycecentertext{
     text-align:center;
 }
+/*makes some of my text work in the overlay*/
 .brycetext {
     color: black;
     font-size: 20px;
