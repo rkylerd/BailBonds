@@ -8,8 +8,45 @@
 
 <div>
     <h4>Agent</h4>
+    <section style="margin: auto; width: 400px; padding: 15px; border: 2px black solid; border-radius: 9px;">
+
+        <div style="min-height: 220px; margin:auto; overflow-x: hidden;">
+            <img class="tough-guy-profile" src="@Html.DisplayFor(model => model.imageSource)" alt="Image of @Html.DisplayFor(model => model.fName)  @Html.DisplayFor(model => model.lName), the bond agent" />           
+        </div>
+        <div style="padding-left: 10px;">
+
+            <h2 class="flex-text">
+                @Html.DisplayFor(model => model.fName)  @Html.DisplayFor(model => model.lName)
+            </h2>
+
+            <h4 class="flex-text">
+                Counties covered: @foreach (string s in Model.countiesCovered) {@s}
+            </h4>
+
+            <h3 class="flex-text">
+                Contact: @Html.DisplayFor(model => model.phoneNum)
+            </h3>
+        </div>
+        
+    </section>
     <hr />
-    <dl class="dl-horizontal">
+    @*<dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lName)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.phoneNum)
         </dt>
@@ -26,7 +63,7 @@
             @Html.DisplayFor(model => model.imageSource)
         </dd>
 
-    </dl>
+    </dl>*@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |

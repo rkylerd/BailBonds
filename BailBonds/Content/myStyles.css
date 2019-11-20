@@ -14,3 +14,24 @@
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
 }
+
+.tough-guy-icons {
+    display: block;
+    max-height: 250px;
+    max-width: 275px;
+    min-width: 125px;
+}
+
+.tough-guy-profile {
+    margin: auto;
+    display: block;
+    max-height: 400px;
+    max-width: 400px;
+    min-width: 125px;
+}
+
+.flex-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+

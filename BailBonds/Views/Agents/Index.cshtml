@@ -3,13 +3,16 @@
 @{
     ViewBag.Title = "Index";
 }
+<head>
+    <link href="~/Content/myStyles.css" type="text/css" rel="stylesheet"/>
+</head>
 
-<h2>Index</h2>
+<h2>Our Agents</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.fName)
@@ -25,27 +28,40 @@
         </th>
         <th></th>
     </tr>
-    
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.fName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.lName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.phoneNum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.imageSource)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
 
-</table>
+</table>*@
+
+<div style="display: grid; grid-template-columns: 25% 25% 25% 25%">
+    @foreach (var agent in Model)
+    {
+    <section style="width: 400px;">
+        <a href="@Url.Action("Details", "Agents", new { agentCode = agent.agentCode})">
+
+
+            <div style="min-height: 220px;">
+                <div style="max-height: 200px; overflow-y: hidden;">
+                    <img class="tough-guy-icons" src="@Html.DisplayFor(modelItem => agent.imageSource)" alt="Image of @Html.DisplayFor(modelItem => agent.fName)  @Html.DisplayFor(modelItem => agent.lName), the bond agent" />
+                </div>
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => agent.fName)  @Html.DisplayFor(modelItem => agent.lName)
+            </div>
+
+            <div>
+                Counties covered: @foreach (string s in agent.countiesCovered)
+                {@s
+            }
+            </div>
+
+            <div>
+                @Html.DisplayFor(modelItem => agent.phoneNum)
+            </div>
+
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </a>
+    </section>
+    
+    }
+</div>
