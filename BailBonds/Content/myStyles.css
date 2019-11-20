@@ -1,29 +1,23 @@
 ﻿.myJumbotron {
-    background: url(https://jjie.org/wp-content/uploads/2018/06/NEWS-FOTOKITA-shutterstock_758294398.jpg) center;
+    background: center;
+    background-image: url('Images/636718283964270000.jpg');
     background-size: cover;
     color: white;
     font-weight: bold;
 }
 
 
-.bryceimagebackground {
-
-    background-image: url('Images/Family.jpg');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the images */
-}
-
 .brycecontainer {
     position: relative;
     width: 100%;
 }
-
+/*This sets my image*/
 .bryceimage {
     display: block;
     width: 100%;
     height: auto;
 }
-
+/*This Sets my Overlay, so it can fade in and out*/
 .bryceoverlay {
     position: absolute;
     top: 0;
@@ -36,13 +30,15 @@
     transition: .5s ease;
     background-color: yellow;
 }
-
+/*Fades on hover of mouse*/
 .brycecontainer:hover .bryceoverlay {
     opacity: .5;
 }
+/*centers my text*/
 .brycecentertext{
     text-align:center;
 }
+/*makes some of my text work in the overlay*/
 .brycetext {
     color: black;
     font-size: 20px;
@@ -74,3 +70,22 @@
     flex-wrap: wrap;
 }
 
+/*Position of text*/
+div.absolute {
+    position: absolute;
+    top: 465px;
+    right: 100px;
+    width: 500px;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.shadow {
+    text-shadow: 1px 1px #800000;
+}
+
+.checked {
+    color: orange;
+}

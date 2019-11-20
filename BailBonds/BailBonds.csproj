@@ -134,6 +134,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\636718283964270000.jpg" />
+    <Content Include="Content\Images\D91_44_043_0004_600.jpg" />
     <Content Include="Content\Images\newfamily.jpg" />
     <Content Include="Content\myStyles.css" />
     <Content Include="favicon.ico" />
