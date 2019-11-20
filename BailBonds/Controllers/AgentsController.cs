@@ -84,5 +84,19 @@ namespace BailBonds.Controllers
             Agent editAgent = agentList.FirstOrDefault(x => x.agentCode == agentCode);
             return View(editAgent);
         }
+
+        [HttpGet]
+        public ActionResult Delete(String agentCode)
+        {
+            for (int agentCounter = 0; agentCounter < agentList.Count; agentCounter++)
+            {
+                if (agentList[agentCounter].agentCode == agentCode)
+                {
+                    agentList.RemoveAt(agentCounter);
+                }
+            }
+
+            return View("Index", agentList);
+        }
     }
 }

@@ -57,9 +57,8 @@
                 @Html.DisplayFor(modelItem => agent.phoneNum)
             </div>
 
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { agentCode = agent.agentCode })
+            @Html.ActionLink("Delete", "Delete", new { agentCode = agent.agentCode })
             </a>
     </section>
     
