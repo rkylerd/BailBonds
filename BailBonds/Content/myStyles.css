@@ -1,5 +1,6 @@
 ﻿.myJumbotron {
-    background: url(https://jjie.org/wp-content/uploads/2018/06/NEWS-FOTOKITA-shutterstock_758294398.jpg) center;
+    background: center;
+    background-image: url('Images/636718283964270000.jpg');
     background-size: cover;
     color: white;
     font-weight: bold;
@@ -69,3 +70,18 @@
     flex-wrap: wrap;
 }
 
+/*Position of text*/
+div.absolute {
+    position: absolute;
+    top: 465px;
+    right: 100px;
+    width: 500px;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.shadow {
+    text-shadow: 1px 1px #800000;
+}
