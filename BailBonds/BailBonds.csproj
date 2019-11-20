@@ -170,10 +170,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Agents\Agents.cshtml" />
     <Content Include="Views\Agents\AddAgent.cshtml" />
-    <Content Include="Views\Agents\Edit.cshtml" />
     <Content Include="Views\Agents\Index.cshtml" />
     <Content Include="Views\Agents\Create.cshtml" />
     <Content Include="Views\Agents\Details.cshtml" />
+    <Content Include="Views\Agents\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
