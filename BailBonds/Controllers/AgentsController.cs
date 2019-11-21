@@ -12,13 +12,13 @@ namespace BailBonds.Controllers
 
         public static List<Agent> agentList = new List<Agent>()
         {
-            new Agent("1", "Terry", "Berry", "804564568", new List<string>(new string[] { "Juab", "Sanpete" }),
+            new Agent("1", "Bars", "Begonne", "804564568", new List<string>(new string[] { "Juab ", "Sanpete" }),
                  "https://members.cogwa.org/uploads/do-you-have-to-be-a-tough-guy-to-be-a-man.jpg"),
-            new Agent("2", "Gene", "Eee", "8045678975", new List<string>(new string[] { "Utah"}),
+            new Agent("2", "Bond", "James", "8045678975", new List<string>(new string[] { "Utah"}),
                  "https://cdn.quotesgram.com/img/61/31/1273965187-792251-tough-guys.jpg"),
-            new Agent("3", "Gene", "Eee", "8045678975", new List<string>(new string[] { "Utah"}),
+            new Agent("3", "Geetin", "Yaouttajail", "9015678976", new List<string>(new string[] { "Salt Lake"}),
                  "https://correspondent.afp.com/sites/default/files/styles/adaptative/adaptive-image/public/medias/aa_new_posts/countries/britain/uk-sport/tough-guy-feb2017/britain-lifestyle-toughguy111.jpg?itok=S16pZcC2"),
-            new Agent("4", "Ulysses", "Martinez", "8016600975", new List<string>(new string[] { "Garfield", "Duchesne"}),
+            new Agent("4", "Nomo", "Jailtyme", "8016600975", new List<string>(new string[] { "Garfield ", "Duchesne"}),
                  "http://4.bp.blogspot.com/---bZjdDhZTk/Tx7Se_mV_JI/AAAAAAAAA2g/LmxVU1poCZE/s1600/tough-guy-motivational.jpg")
         };
        
