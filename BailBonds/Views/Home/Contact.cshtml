@@ -4,25 +4,38 @@
     ViewBag.Title = "Contact";
 }
 
-<h2>Contact</h2>
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/myStyles.css" />
+</head>
 
+<div class="brycecontainer">
+    <img src="~/Content/Images/colorscrop.png" alt="Family" class="bryceimage">
+    <div class="brycetext">
+        <h2 class="brycecentertext">Contact Us</h2>
+        <p> We'd really love to hear from you. <br /> Whether you have a question about pricing, finding an agent, or just want to chat, our team is ready to answer all your questions</p>  
+    </div>
+</div>
+<br />
+<h4>Come give us a visit</h4>
+<address>
+    Legit Street Address<br />
+    Salt Lake, UT 84604<br />
+    <abbr title="Phone">P:</abbr>
+    (425)-555-0100
+</address>
+<br />
+<h4>Or email our Support or Marking Team directly</h4>
 <address>
     <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
     <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
 </address>
-
+<br />
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Contact Form</h4>
+        <h4>Or Simply fill out this form and we will respond to your email as quickly as possible</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -70,7 +83,7 @@
         </div>
     </div>
 }
-
+    <h4 class=" = brycecentertext">However you choose to contact us, your customer satisfaction is our guarantee</h4>
 <div>
     @Html.ActionLink("Back to Home", "Index")
 </div>
