@@ -79,15 +79,16 @@
 .tough-guy-icons {
     display: block;
     max-height: 250px;
-    max-width: 275px;
-    min-width: 125px;
+    min-height: 200px; 
+    max-width: 260px;
+    min-width: 260px;
 }
 
 .tough-guy-profile {
     margin: auto;
     display: block;
-    max-height: 400px;
-    max-width: 400px;
+    max-height: 350px;
+    max-width: 350px;
     min-width: 125px;
 }
 
