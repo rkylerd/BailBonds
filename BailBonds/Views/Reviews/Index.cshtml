@@ -1,0 +1,83 @@
+﻿@model BailBonds.Models.Review
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Reviews</h2>
+
+<section class="col-2" style="color: #234;">
+    <div>
+
+        @using (Html.BeginForm("Create", "Reviews", FormMethod.Post))
+        {
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.author, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.author, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.author, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.rating, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.rating, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.rating, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.reviewBody, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.reviewBody, new { htmlAttributes = new { @class = "form-control round-border text-area" } })
+                    @Html.ValidationMessageFor(model => model.reviewBody, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div style="margin-left: auto;" class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Post" class="btn btn-default" />
+                </div>
+            </div>
+
+
+        }
+    </div>
+
+    <div>
+        <h1 style="text-align: center;">All Reviews</h1>
+        @foreach (var item in ViewBag.reviews)
+        {
+            <div style="border: 1px solid #abc; box-shadow: 1px #234; margin-bottom: 15px;">
+                <div style=" padding: 5px 10px; max-width: 100%; background-color: #abc; display: grid; grid-template-columns: auto auto auto">
+                    <span style="font-size: large;">
+                        <strong>
+                            @item.author
+                        </strong>
+                    </span>
+                    <span>
+                        @for (int rating = 0; rating < item.rating; rating++)
+                        {
+                            <span class="fa fa-star checked"></span>
+                        }
+
+                    </span>
+                    <span>
+                        @item.date
+                    </span>
+                </div>
+
+                <div style="max-width: 100%; padding: 5px 10px; min-height: 50px;">
+                    @item.reviewBody
+                </div>
+
+            </div>
+        }
+    </div>
+</section>
+

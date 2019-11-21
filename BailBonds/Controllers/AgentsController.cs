@@ -39,6 +39,7 @@ namespace BailBonds.Controllers
         public ActionResult Create(Agent agent)
         {
             agent.agentCode = "" + agentList.Count + 1;
+            agent.countiesCovered = new List<string>() { "Salt Lake" };
             if (ModelState.IsValid)
             {
                 agentList.Add(agent);
@@ -56,6 +57,7 @@ namespace BailBonds.Controllers
         [HttpGet]
         public ActionResult Edit(String agentCode)
         {
+            
             Agent editAgent = agentList.FirstOrDefault(x => x.agentCode == agentCode);
             return View(editAgent);
         }
@@ -74,7 +76,7 @@ namespace BailBonds.Controllers
                     }
             
                 }
-                return View("Index");
+                return View("Index", agentList);
             }
             return View();
         }

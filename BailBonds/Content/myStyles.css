@@ -6,6 +6,32 @@
     font-weight: bold;
 }
 
+.round-border {
+    border-radius: 9px;
+}
+.text-area {
+    padding: 10px !important;
+    border: 1px ridge hidden !important;
+    min-height: 205px !important;
+    max-height: 205px !important;
+    min-width: 95% !important;
+    max-width: 95% !important;
+}
+
+/*Divides the page in two, divided vertically*/
+.col-2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    
+}
+
+.col-2 div {
+    margin: auto;
+    align-items: baseline;
+    max-width: 95%;
+    min-width: 50%;
+}
 
 .brycecontainer {
     position: relative;

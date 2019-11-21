@@ -11,10 +11,27 @@ namespace BailBonds.Models
 
         [ScaffoldColumn(false)]
         public string agentCode { get; set; }
+
+        [Display(Name = "First Name")]
+        [Required(ErrorMessage = "Enter a valid first name.")]
+        [StringLengthAttribute(20, ErrorMessage = "First name must be shorter than 20 characters.")]
         public string fName { get; set; }
+
+        [Display(Name = "Last Name")]
+        [Required(ErrorMessage = "Enter a valid last name.")]
+        [StringLengthAttribute(20, ErrorMessage = "Last name must be shorter than 20 characters.")]
         public string lName { get; set; }
+
+        [Display(Name = "Phone #")]
+        [Required(ErrorMessage = "Enter a valid last name.")]
+        [StringLengthAttribute(10, ErrorMessage = "Last name must be shorter than 20 characters.")]
         public string phoneNum { get; set; }
+        
         public List<string> countiesCovered { get; set; }
+
+        
+        [Required(ErrorMessage = "Enter a valid url image.")]
+        
         public string imageSource { get; set; }
 
         public Agent()

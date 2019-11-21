@@ -22,3 +22,12 @@ select,
 textarea {
     max-width: 280px;
 }
+
+textarea {
+    padding: 10px !important;
+    border: 1px ridge hidden !important;
+    min-height: 205px !important;
+    max-height: 205px !important;
+    min-width: 95% !important;
+    max-width: 95% !important;
+}
