@@ -17,14 +17,16 @@
 <div class="row">
     <div class="absolute">
         <h1>Welcome to <strong style="color: #cc0000">BestBond</strong></h1><br />
-        <p><strong style="color: #cc0000">BestBond</strong> was founded with the intent of helping those who encounter themselves in a bad situation.
+        <p style="font-size: 19px">Let us help you take care of those whom you care about!</p>
+        <p>
+            <strong style="color: #cc0000">BestBond</strong> was founded with the intent of helping those who encounter themselves in a bad situation.
             Our motto is to work promptly to get the ones you love out of jail.
         </p>
-        <p>You may find the agents closest to you on the <strong>@Html.ActionLink("Agents", "Index", "Agents")</strong> page and contact them at your leaisure.</p>
-        <p>Our agents are experienced professionals who have worked with bails for years. They will tell you exactly what it is that
+        <p>
+            Our agents are experienced professionals who have worked with bails for years. They will tell you exactly what it is that
             you need to do and they will take care of the rest.
         </p>
-        <p style="font-size: 19px">Let us help you take care of those whom you care about!</p>
+        <p>We have agents in every county in     Utah. You may find the agents closest to you on the <strong>@Html.ActionLink("Agents", "Index", "Agents")</strong> page and contact them at your leaisure.</p>
         <i class="text-danger" style="font-size: 12px" i>*If the client does not show up to court, a Bounty Hunter will be hired to retrieve them!</i>
     </div>
 </div>
@@ -54,28 +56,9 @@
 
     <p>To see more reviews check out our @Html.ActionLink("Reviews", "Reviews", "Home") page.</p>
 </div>
-
-
-
-                                          @*div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-                <h2>Web Hosting</h2>
-                <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-            </div>
-        </div>
-                                          *@
+<div>
+    <img class="guiimage" src="~/Content/Images/33888514-authentic-stamp.jpg" />
+    <a href="@Url.Action("Index", "Agents")">
+        <img class="guiimage2" src="~/Content/Images/county_map.jpg" />        
+    </a>
+</div>

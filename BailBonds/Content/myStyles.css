@@ -79,7 +79,7 @@ div.absolute {
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: white;
 }
 
 .shadow {
@@ -88,4 +88,20 @@ body {
 
 .checked {
     color: orange;
+}
+
+.guiimage {
+    position: absolute;
+    width: 10%;
+    height: 15%;
+    top: 1160px;
+    right: 36px;
+}
+
+.guiimage2 {
+    position: absolute;
+    width: 30%;
+    height: 67%;
+    top: 816px;
+    right: 200px;
 }
