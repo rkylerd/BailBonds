@@ -181,7 +181,6 @@
     <Content Include="Views\Agents\Create.cshtml" />
     <Content Include="Views\Agents\Details.cshtml" />
     <Content Include="Views\Agents\Edit.cshtml" />
-    <Content Include="Views\Home\Reviews.cshtml" />
     <Content Include="Views\Reviews\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
