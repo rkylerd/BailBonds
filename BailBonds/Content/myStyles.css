@@ -28,6 +28,7 @@
 
 .col-2 div {
     margin: auto;
+    margin-top: 10px;
     align-items: baseline;
     max-width: 95%;
     min-width: 50%;
