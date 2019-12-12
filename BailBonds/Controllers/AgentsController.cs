@@ -1,4 +1,5 @@
-﻿using BailBonds.Models;
+﻿using BailBonds.DAL;
+using BailBonds.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +11,13 @@ namespace BailBonds.Controllers
     public class AgentsController : Controller
     {
 
-        public static List<Agent> agentList = new List<Agent>()
-        {
-            new Agent("1", "Bars", "Begonne", "804564568", new List<string>(new string[] { "Juab ", "Sanpete" }),
-                 "https://members.cogwa.org/uploads/do-you-have-to-be-a-tough-guy-to-be-a-man.jpg"),
-            new Agent("2", "Bond", "James", "8045678975", new List<string>(new string[] { "Utah"}),
-                 "https://cdn.quotesgram.com/img/61/31/1273965187-792251-tough-guys.jpg"),
-            new Agent("3", "Geetin", "Yaouttajail", "9015678976", new List<string>(new string[] { "Salt Lake"}),
-                 "https://correspondent.afp.com/sites/default/files/styles/adaptative/adaptive-image/public/medias/aa_new_posts/countries/britain/uk-sport/tough-guy-feb2017/britain-lifestyle-toughguy111.jpg?itok=S16pZcC2"),
-            new Agent("4", "Nomo", "Jailtyme", "8016600975", new List<string>(new string[] { "Garfield ", "Duchesne"}),
-                 "http://4.bp.blogspot.com/---bZjdDhZTk/Tx7Se_mV_JI/AAAAAAAAA2g/LmxVU1poCZE/s1600/tough-guy-motivational.jpg")
-        };
-       
-        
+        private BailBondContext db = new BailBondContext();
+
         public ActionResult Index()
         {
             //agentList.Add();
             
-            return View(agentList);
+            return View(db.Agents.ToList());
         }
 
         public ActionResult Create()
@@ -38,12 +28,12 @@ namespace BailBonds.Controllers
         [HttpPost]
         public ActionResult Create(Agent agent)
         {
-            agent.agentCode = "" + agentList.Count + 1;
-            agent.countiesCovered = new List<string>() { "Salt Lake" };
+
+            //agent.countiesCovered = new List<string>() { "Salt Lake" };
             if (ModelState.IsValid)
             {
-                agentList.Add(agent);
-                return View("Index", agentList);
+                db.Agents.Add(agent);
+                return View("Index", db.Agents.ToList());
             }
 
             return View();
@@ -51,14 +41,14 @@ namespace BailBonds.Controllers
 
         public ActionResult Agents()
         {
-            return View(agentList);
+            return View(db.Agents.ToList());
         }
 
         [HttpGet]
-        public ActionResult Edit(String agentCode)
+        public ActionResult Edit(int? agentCode)
         {
             
-            Agent editAgent = agentList.FirstOrDefault(x => x.agentCode == agentCode);
+            Agent editAgent = db.Agents.ToList().FirstOrDefault(x => x.AgentID == agentCode);
             return View(editAgent);
         }
 
@@ -67,38 +57,38 @@ namespace BailBonds.Controllers
         {
             if (ModelState.IsValid)
             {
-                for (int agentCount = 0; agentCount < agentList.Count; agentCount++)
+                for (int agentCount = 0; agentCount < db.Agents.ToList().Count; agentCount++)
                 {
-                    if (agentList[agentCount].agentCode == editedAgent.agentCode)
+                    if (db.Agents.ToList()[agentCount].AgentID == editedAgent.AgentID)
                     {
-                        agentList[agentCount] = editedAgent;
+                        db.Agents.ToList()[agentCount] = editedAgent;
                         break;
                     }
             
                 }
-                return View("Index", agentList);
+                return View("Index", db.Agents.ToList());
             }
             return View();
         }
 
-        public ActionResult Details(string agentCode)
+        public ActionResult Details(int? agentCode)
         {
-            Agent editAgent = agentList.FirstOrDefault(x => x.agentCode == agentCode);
+            Agent editAgent = db.Agents.ToList().FirstOrDefault(x => x.AgentID == agentCode);
             return View(editAgent);
         }
 
         [HttpGet]
-        public ActionResult Delete(String agentCode)
+        public ActionResult Delete(int? agentCode)
         {
-            for (int agentCounter = 0; agentCounter < agentList.Count; agentCounter++)
+            for (int agentCounter = 0; agentCounter < db.Agents.ToList().Count; agentCounter++)
             {
-                if (agentList[agentCounter].agentCode == agentCode)
+                if (db.Agents.ToList()[agentCounter].AgentID == agentCode)
                 {
-                    agentList.RemoveAt(agentCounter);
+                    db.Agents.ToList().RemoveAt(agentCounter);
                 }
             }
 
-            return View("Index", agentList);
+            return View("Index", db.Agents.ToList());
         }
     }
 }

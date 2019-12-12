@@ -9,6 +9,7 @@
 .round-border {
     border-radius: 9px;
 }
+
 .text-area {
     padding: 10px !important;
     border: 1px ridge hidden !important;
@@ -19,14 +20,14 @@
 }
 
 /*Divides the page in two, divided vertically*/
-.col-2 {
+.two-col {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     
 }
 
-.col-2 div {
+.two-col div {
     margin: auto;
     margin-top: 10px;
     align-items: baseline;
